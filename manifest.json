@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Blocks control",
+  "version": "1.0",
+
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [{
+    "matches": [
+      "<all_urls>"
+    ],
+    "js": ["content.js"],
+    "run_at": "document_idle",
+    "all_frames": false
+  }],
+
+  "browser_action": {
+    "default_title": "Blocks control",
+    "default_popup": "popup.html"
+  }
+}
